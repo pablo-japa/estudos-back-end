@@ -7,7 +7,6 @@ import view.PaisView;
 import Dao.PaisDao;
 
 public class PaisController {
-	private List<Pais> listaDePaises;
 	private PaisView paisView;
 	private PaisDao paisDao;
 	
