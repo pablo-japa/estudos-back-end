@@ -7,10 +7,12 @@ import view.PaisView;
 import Dao.PaisDao;
 
 public class PaisController {
+	
 	private PaisView paisView;
 	private PaisDao paisDao;
 	
 	public PaisController() {
+		
 		listaDePaises = new ArrayList<>();
 		paisView = new PaisView();
 	}
