@@ -17,7 +17,7 @@ public class ImcController {
 		
 	}
 	
-	public void adicionarPessoa(String pessoa, String sexo, int idade, int altura, double peso, double imc) {
+	public void adicionarPessoa(String pessoa, String sexo, int idade, double altura, double peso, double imc) {
 		PessoaModel pessoaModel = new PessoaModel(pessoa, sexo, idade, altura, peso, imc);
 		dao.adicionarPessoa(pessoaModel);
 		
