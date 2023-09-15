@@ -5,17 +5,17 @@ public class PessoaModel {
 	String pessoa;
 	String sexo;
 	int idade;
-	int altura;
+	double altura;
 	double peso;
 	double imc;
 	
-	public PessoaModel(String pessoa, String sexo, int idade, int altura, double peso, double imc) {
+	public PessoaModel(String pessoa, String sexo, int idade, double altura, double peso, double imc) {
 		this.pessoa = pessoa;
 		this.sexo = sexo;
 		this.altura = altura;
 		this.idade = idade;
 		this.peso = peso;
-		this.setImc(calcularImc());
+		this.imc = calcularImc();
 		
 	}
 	
@@ -57,8 +57,9 @@ public class PessoaModel {
 		this.idade = idade;
 	}
 
-	public int getAltura() {
+	public double getAltura() {
 		return altura;
+		
 	}
 
 	public void setAltura(int altura) {
@@ -66,7 +67,7 @@ public class PessoaModel {
 		if (altura >= 0) {
 			this.altura = altura;
 		} else {
-			throw new IllegalArgumentException ("Altura n„o pode ser negativa");
+			throw new IllegalArgumentException ("Altura n√£o pode ser negativa");
 		}
 	}
 
@@ -78,7 +79,7 @@ public class PessoaModel {
 		if (peso >= 0) {
 			this.peso = peso;
 		} else
-			throw new IllegalArgumentException ("O peso n„o pode ser negativo");
+			throw new IllegalArgumentException ("O peso n√£o pode ser negativo");
 	}
 	
 
