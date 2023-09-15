@@ -13,12 +13,14 @@ public class Main {
 		
 	
 	int opcao = -1;
-	while (opcao >= 0) {
+	while (opcao != 0) {
 		System.out.println("-------CALCULADOR DE IMC--------");
-		System.out.println("Escolha as opções a baixo:");
+		System.out.println("Escolha as opÃ§Ãµes a baixo:");
 		System.out.println("1 - adicionar pessoa");
-		System.out.println("2 - exibir lista das pessoas e suas informações");
+		System.out.println("2 - exibir lista das pessoas e suas informaÃ§Ãµes");
 		System.out.println("3 - remover uma pessoa");
+		
+		opcao = scanner.nextInt();
 		
 		
 		switch (opcao) {
@@ -33,12 +35,20 @@ public class Main {
 		int idade = scanner.nextInt();
 		
 		System.out.println("Digite a altura");
-		int altura = scanner.nextInt();
+		double altura = scanner.nextDouble();
 		
 		System.out.println("Digite o peso");
 		double peso = scanner.nextDouble();
 		
-		imcController.adicionarPessoa(pessoa, sexo, idade, altura, peso);
+		System.out.println("O imc serÃ¡ exibido");
+		double imc = scanner.nextDouble();
+		
+		
+		imcController.adicionarPessoa(pessoa, sexo, idade, altura, peso, imc);
+		break;
+		
+		case 2:
+		
 		
 		
 		
@@ -49,4 +59,5 @@ public class Main {
 
 }
 }
+
 
