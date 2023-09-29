@@ -7,14 +7,14 @@ public class ListaModel {
 	}
 	
 	
-	private int idTarefa;
+	private int id_tarefa;
 	private String titulo;
 	private String descricao;
 	private Status status;
 	
 	
-	public ListaModel(int idTarefa, String titulo, String descricao, Status status) {
-		this.idTarefa = idTarefa;
+	public ListaModel(int id_tarefa, String titulo, String descricao, Status status) {
+		this.id_tarefa = id_tarefa;
 		this.titulo = titulo;
 		this.descricao = descricao;
 		this.status = status;
@@ -51,13 +51,13 @@ public class ListaModel {
 	}
 
 
-	public int getIdTarefa() {
-		return idTarefa;
+	public int getId_tarefa() {
+		return id_tarefa;
 	}
 
 
-	public void setIdTarefa(int idTarefa) {
-		this.idTarefa = idTarefa;
+	public void setId_tarefa(int id_tarefa) {
+		this.id_tarefa = id_tarefa;
 	}
 	
 	
