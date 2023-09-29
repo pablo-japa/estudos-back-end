@@ -19,8 +19,8 @@ public class ListaController {
 		
 	}
 	
-	public void adicionarTarefa(int idTarefa, String titulo, String descricao, Status status) {
-		ListaModel listaModel = new ListaModel (idTarefa, titulo, descricao, status);
+	public void adicionarTarefa(int id_tarefa, String titulo, String descricao, Status status) {
+		ListaModel listaModel = new ListaModel (id_tarefa, titulo, descricao, status);
 		dao.adicionarTarefa(listaModel);
 		
 		
@@ -38,6 +38,8 @@ public class ListaController {
 		
 	}
 	public void limparLista() {
+		dao.limparLista();
+		view.limparlista();
 		
 	}
 
