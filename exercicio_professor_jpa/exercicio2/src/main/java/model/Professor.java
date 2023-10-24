@@ -1,4 +1,6 @@
 package model;
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,18 +9,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "pessoa")
-public class Professor {
+@Table (name = "professor")
+public class Professor{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column (name="nomecompleto")
+	@Column (name="nome_completo")
 	private String nome;
-	
-	@Column (name = "email")
-	private String email;
 	
 	@Column (name = "especialidade")
 	private String especialidade;
@@ -28,11 +27,28 @@ public class Professor {
 	
 	public Professor() {}
 	
-	public Professor(String nome, String email, String especialidade, String dataAdmissao) {
+	public Professor(String nome, String especialidade, String dataAdmissao) {
 		this.id = null;
 		this.nome = nome;
-		this.email = email;
 		this.especialidade = especialidade;
+		this.dataAdmissao = dataAdmissao;
+	}
+	
+	
+
+	public String getEspecialidade() {
+		return especialidade;
+	}
+
+	public void setEspecialidade(String especialidade) {
+		this.especialidade = especialidade;
+	}
+
+	public String getDataAdmissao() {
+		return dataAdmissao;
+	}
+
+	public void setDataAdmissao(String dataAdmissao) {
 		this.dataAdmissao = dataAdmissao;
 	}
 
@@ -42,14 +58,6 @@ public class Professor {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 	
 	public Integer getId() {
@@ -61,7 +69,6 @@ public class Professor {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((dataAdmissao == null) ? 0 : dataAdmissao.hashCode());
-		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
@@ -81,11 +88,6 @@ public class Professor {
 				return false;
 		} else if (!dataAdmissao.equals(other.dataAdmissao))
 			return false;
-		if (email == null) {
-			if (other.email != null)
-				return false;
-		} else if (!email.equals(other.email))
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -100,7 +102,7 @@ public class Professor {
 	}
 	
 	public String toString() {
-		return "Pais [id = " + id + ", nome=" + nome + ",email=" + email + ",dataAdmissao=" + dataAdmissao + "]";
+		return "Pais [id = " + id + ", nome=" + nome + ",dataAdmissao=" + dataAdmissao + "]";
 		
 	}
 	
